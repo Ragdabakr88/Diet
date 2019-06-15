@@ -1,0 +1,119 @@
+
+
+			<!--Content Area Start-->
+			<div id="content">
+				<!-- slider-hero start here -->
+				<section class="slider-hero-resturant inner-banner_info">
+					<div class="container">
+						<h1>Resturants listing</h1>
+					</div>
+				</section>
+
+				<!-- slider-hero End here -->
+				<!-- breadcrum-sec start here -->
+				<section class="breadcrum-sec">
+					<div class="container">
+						<ol class="breadcrumb">
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li class="active">
+								Resturant listing
+							</li>
+						</ol>
+					</div>
+				</section>
+				<!-- breadcrum-sec end here -->
+		<section class="slider">
+          <div class="owl-carousel2 owl-theme">
+          {{#each resturants}}
+            <div class="items">
+             <img src="/uploads/{{images.[0]}}"  alt="products"/ style="width: 400px;  height: 250px;">
+            </div>
+            {{/each}}
+                     
+          </div>           
+        </section>
+				         <!-- cool-products start here -->
+				<section class="cool-products">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-md-8">
+						<!--- search -->
+						 <div class="search-container">
+						    <form action="/searchRes" method="POST">
+						      <input type="text" placeholder="Search by name or country" name="searchQuery">
+						      <button type="submit">Submit</button>
+						    </form>
+						  </div>
+                     </div>
+
+                    <div class="col-xs-12 col-md-4">
+                  <!--  {{#if user.isResturant}}
+                    <a href="/resturant/addResturant" class="myButton">Add another Resturant</a>
+                   {{else if user }}
+                   <a href="/payment/resturantPay" class="myButton">Add new Resturant</a>
+                   {{else}}
+                    <a href="/registersponser" class="myButton">Add new Resturant</a>
+                   {{/if}} -->
+                  
+                  </div>
+				</div>
+			</div>
+		</section>
+						<!-- end search -->
+
+				<!-- 	main-event-content style start here -->
+				<section class="main-event-content">
+					<div class="container">
+				
+					{{#each resturants}}
+						<div class="row padding">
+							<div class="col-xs-12 col-sm-1">
+								<div class="event-event clearfix">
+									<span class="event-calender-event"><i class="fa fa-phone phone-btn"></i><span style="color:#ffffff">+{{phone}}</span> </span>
+
+								</div>
+
+							</div>
+							
+							<div class="col-xs-12 col-sm-6 zoom">
+								<figure>
+									<img src="/uploads/{{images.[0]}}"   class="img-resturant" style="width: 460px; height:300px; margin-left: 32px">
+								</figure>
+
+							</div>
+							<div class="col-xs-12 col-sm-5">
+								<div class="event-info-event">
+									<h3><a href="/resturant/{{id}}">{{title}}</a></h3>
+									<div class="time-location-event">
+										<span>+{{phone}}</span>
+										<span>{{address}}</span>
+									</div>
+									<p>
+										{{Discrption}}
+									</p>
+									<!-- <a href="event-details.html" class="read-more">READ MORE </a> -->
+								</div>	
+							</div>
+						</div>						
+					{{/each}}	
+									
+					<!-- Pagination -->
+          <ul class="pagination justify-content-center mb-4">
+            {{#paginate current=current pages=pages}}{{/paginate}}
+           </ul>
+
+					</div>
+				</section>
+				<!-- 	main-blog-content style end here -->
+
+			</div>
+			<!--Content Area End-->
+
+		</div>
+
+
+  <script type="text/javascript">
+	document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {  this.parentNode.querySelector('input').focus();});
+  </script>  

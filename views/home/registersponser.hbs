@@ -1,0 +1,88 @@
+{{#if user}}
+
+<div class="container-fluid ">
+   </div>
+      <div id="content">
+        <!-- slider-hero start here -->
+        <section class="slider-hero-dietplan">
+          <div class="container">
+            <h1>Your payment plan</h1>
+          </div>
+        </section>
+      </div>
+    <div class="text-center meal-center">
+  <h2><a href="/payment">Go to payment plan</a></h2>
+</div>
+
+{{else}}
+
+<div class="container-fluid top-fixed-menu-banner">
+</div>
+<div class="errors">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8  col-md-offset-2">
+                  {{#each errors}}
+                        <div class="alert alert-danger alert-dismissible">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          <strong>Error</strong> {{this}}
+                        </div>  
+                  {{/each}}
+            </div>                        
+        </div>
+    </div>
+</div>
+
+<div class="register">
+  <div class="row">
+     <div class="col-md-8  col-md-offset-2 register-warpr"> 
+          <div class="col-md-6 banner-img">
+             </div>      
+                <form action="/registersponser" class="col-md-6"  method="post">
+                   <div class="form-group">
+                    <label for="email">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{name}}" type="text" aria-describedby="nameHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{email}}" type="text" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" name="password">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Conform Password:</label>
+                    <input type="password" class="form-control" id="pwdc" name="passwordConfirm">
+                  </div>
+                  <br>
+
+                  <div class="policy">
+                    Terms & conditions:
+                    <br/>
+                    *Your product or restaurant must be considered as a healthy option
+                    <br/>
+                    <br/>
+                    *To advertise your product you should add a photo,discription,nutrition facts,and your link.
+                    <br/>
+                    <br/>
+                    *To advertise your resturant you should add a photo,discription and your address.
+                    Once you create your advertisment it can not be edited.
+
+                    <label class="form-check-label">
+                      <input class="form-check-input checkbox_check"  id="termscons" type="checkbox" style="width:30px; height:30px;padding-top: 20px;">
+                      <span style="padding-top: -20px;">
+                         Agree all Terms & conditions
+                      </span>
+                    </label>
+                  </div>
+                   <br/>
+                   <br/>
+
+                   <button type="submit" class="button-btn" disabled="disabled"  id="btnSubmit" style="margin-top: 80px;">Submit</button>
+                </form>
+         </div>
+     </div>
+</div>  
+{{/if}}
+

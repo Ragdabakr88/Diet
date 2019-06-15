@@ -1,0 +1,92 @@
+
+
+
+
+      <!--Content Area Start-->
+      <div id="content">
+        <!-- slider-hero start here -->
+        <section class="slider-hero-resturant  inner-banner_info">
+          <div class="container">
+            <h1>Resturant Payment</h1>
+          </div>
+        </section>
+
+        <!-- slider-hero End here -->
+
+        <!-- breadcrum-sec start here -->
+        <section class="breadcrum-sec">
+          <div class="container">
+            <ol class="breadcrumb">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li class="active">
+                Resturant Payment
+              </li>
+            </ol>
+          </div>
+        </section>
+        <!-- breadcrum-sec end here -->
+
+        <!-- package_wrap start here -->
+        <section class="package-wrap">
+          <div class="container">
+
+            <div class="row space_pad">
+              <div class="col-xs-12 col-sm-6 package-list zoom">
+                <figure>
+                  <img src="/images/meal3.jpeg" alt="packages" />
+                </figure>
+                <div class="package-info">
+                  <div class="head-two">
+                    <h3>Resturant Package</h3>
+                    <span>Add one resturant for 1 $</span>
+                  </div>
+                  <ul class="list-global pack-list ">
+                    <li>
+                      <i class="fa fa-check-circle"></i>one resturant
+                    </li>
+                    <li>
+                      <i class="fa fa-check-circle"></i>$1 for one resturant
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="package-price">
+                  <span>$1</span>
+                  <a href="" class="button-btn">
+                       <div>
+                            <form action='/payment/resturantPay' method='POST'>
+                            <script
+                              src='https://checkout.stripe.com/checkout.js' class='stripe-button'
+                              data-key='pk_test_WweltUcTHqAf6u0FFbAgvRJp'
+                              data-amount='100'
+                              data-name='beck beacker Participation'
+                              data-description='Participation to add resturent'
+                              data-image='https://stripe.com/img/documentation/checkout/marketplace.png'
+                              data-locale='auto'
+                              data-zip-code='true'>
+                            </script>
+                            <input type="hidden" name="chargeAmount" value="100">
+                             <input type="hidden" name="user_id" value="{{user._id}}">
+                            </form>
+                        </div>
+                    </a>
+                </div>
+
+              </div>
+              
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- package_wrap End here -->
+
+      </div>
+      <!--Content Area End-->
+
+
+    </div>
+     

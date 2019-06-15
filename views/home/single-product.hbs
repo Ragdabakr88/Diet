@@ -1,0 +1,125 @@
+<!--Content Area Start-->
+			<div id="content">
+				<!-- slider-hero start here -->
+				<section class="slider-hero-organic inner-banner_info">
+					<div class="container">
+						<h1>{{title}} detailes</h1>
+					</div>
+				</section>
+
+				<!-- slider-hero End here -->
+
+				<!-- breadcrum-sec start here -->
+				<section class="breadcrum-sec">
+					<div class="container">
+						<ol class="breadcrumb">
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li class="active">
+								{{title}} detailes
+							</li>
+						</ol>
+					</div>
+				</section>
+				<!-- breadcrum-sec end here -->
+
+				<!-- shop-detail start here -->
+				<section class="shop-detail-info">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-5">
+								<div class="img-wrap text-center zoom">
+									<figure>
+										<img src="/uploads/{{product.images.[0]}}" alt="" style="width: 350px;height: 250px;">
+									</figure>
+								</div>
+								<ul class="product-img-wrap clearfix">
+									{{#each product.images}}
+									<li>
+										<img src="/uploads/{{this}}" alt="">
+									</li>
+									{{/each}}
+									
+
+								</ul>
+							</div>
+							<div class="col-xs-12 col-sm-7">
+								<div class="shoes-info-wrap clearfix">
+									<div class="shoes-info">
+										<h2>{{product.title}}</h2>
+										<p>{{product.company}}</p>
+									</div>
+									<div class="rate-info">
+										
+									</div>
+
+								</div>
+								<p>
+									{{product.Discrption}}
+								</p>
+								<div class="cart-info">
+									<a class="button-btn" href="{{product.link}}">Buy product<i class="icon-basket-loaded"> </i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- shop-detail end here -->
+
+				<!-- description-review start here -->
+				<section class="description-review">
+					<div class="container">
+						<div class="description-review-detail">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active">
+									<a href="#home" aria-controls="home" role="tab" data-toggle="tab">Facts</a>
+								</li>
+								
+
+							</ul>
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="home">
+
+									<li>
+										<img src="/uploads/{{product.facts.[0]}}" alt="">
+									</li>
+
+								</div>
+								
+
+							</div>
+						</div>
+
+					</div>
+				</section>
+				<!-- description-review end here -->
+
+				<!--cool-products start here -->
+				<section class="cool-products">
+					<div class="container">
+						<div class="head-global">
+							<h6>related product</h6>
+						</div>
+						<div class="row">
+                         {{#each products}}
+							<div class="col-xs-12 col-sm-3 zoom">
+								<figure>
+									<a href="#"><img src="/uploads/{{images.[0]}}"  alt="products"/ style="width: 300px;  height: 200px;" ></a>
+								</figure>
+								<div class="slider-content product-content">
+									<h3><a href="#">{{title}}</a></h3>
+									<span>{{company}}</span>
+									<a href="{{link}}" class="plus-more">+</a>
+								</div>
+
+							</div>
+						{{/each}}
+						</div>
+					</div>
+
+				</section>
+				<!-- cool-products end here -->
+
+			</div>
+			<!--Content Area End-->

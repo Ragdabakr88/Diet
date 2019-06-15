@@ -1,0 +1,156 @@
+
+
+
+
+      <!--Content Area Start-->
+      <div id="content">
+        <!-- slider-hero start here -->
+        <section class="slider-hero inner-banner_info">
+          <div class="container">
+            <h1>Edit your resturant now!!!</h1>
+          </div>
+        </section>
+
+        <!-- slider-hero End here -->
+
+
+        <!-- breadcrum-sec start here -->
+        <section class="breadcrum-sec">
+          <div class="container">
+            <ol class="breadcrumb">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li class="active">
+                Edit your Resturant
+              </li>
+            </ol>
+          </div>
+        </section>
+        <!-- breadcrum-sec end here -->
+       <section class="addProduct">
+
+        <div class="errors">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8  col-md-offset-2">
+                  {{#each errors}}
+                        <div class="alert alert-danger alert-dismissible">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          <strong>Error</strong> {{this}}
+                        </div>  
+                  {{/each}}
+            </div>                        
+        </div>
+    </div>
+</div>
+
+<section class="panel panel-default">
+<div class="panel-heading"> 
+<h3 class="panel-title">Edit your resturant now !!!</h3> 
+</div> 
+<div class="panel-body">
+
+  
+<form action="/resturant/edit/{{resturant.id}}" class="form-horizontal" role="form"  method="post" enctype="multipart/form-data">
+
+  <div class="form-group">
+    <label for="name" class="col-sm-3 control-label">Video</label>
+    <div class="col-sm-6">
+     <input type="file" name="video" value="{{resturant.video}}" multiple class="form-control"  id="fileChooser" onchange="return ValidateFileUpload()" />
+    </div>
+  </div> <!-- form-group // -->
+   <div class="form-group">
+    <label for="name" class="col-sm-3 control-label">Resturant Name</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="title" id="title" placeholder="Resturant Name" value="{{resturant.title}}">
+    </div>
+  </div> <!-- form-group // -->
+  <div class="form-group">
+    <label for="name" class="col-sm-3 control-label">Resturant Address</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="address" id="address" placeholder="Resturant Address" value="{{resturant.address}}">
+    </div>
+    <!-- form-group // -->
+  </div>
+  <div class="form-group">
+    <label for="name" class="col-sm-3 control-label">Resturant Phone</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="phone" id="phone" placeholder="Resturant Phone" value="{{resturant.phone}}">
+    </div>
+  </div> <!-- form-group // -->
+  <div class="form-group">
+    <label for="name" class="col-sm-3 control-label">Resturant Images</label>
+    <div class="col-sm-6">
+     <input type="file" name="images"  multiple class="form-control"  value="{{resturant.images}}" id="fileChooser" onchange="return ValidateFileUpload()" />
+    </div>
+  </div> <!-- form-group // -->
+    <div class="form-group">
+    <label for="name" class="col-sm-3 control-label">Resturant Link</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="link" id="link" placeholder="Product Link" value="{{resturant.link}}">
+    </div>
+  </div> <!-- form-group // -->
+
+
+    <div class="form-group">
+    <label for="name" class="col-sm-3 control-label">Resturant Discrption</label>
+    <div class="col-sm-6">
+     <textarea id="editor" type="text" class="form-control" cols="3" rows="6" placeholder="Discrption" name="Discrption" value="{{resturant.Discrption}}"></textarea>
+    </div>
+
+   <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-8" style="margin-top: 30px;">
+      <button type="submit" class="btn btn-submit">
+         Submit
+      </button>
+    </div>
+  </div>
+</section><!-- panel// -->
+
+</div>
+
+<!-----Validation of image   ---->
+<SCRIPT type="text/javascript">
+    function ValidateFileUpload() {
+        var fuData = document.getElementById('fileChooser');
+        var FileUploadPath = fuData.value;
+
+//To check if user upload any file
+        if (FileUploadPath == '') {
+            alert("Please upload an image");
+
+        } else {
+            var Extension = FileUploadPath.substring(
+                    FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+
+//The file uploaded is an image
+
+if (Extension == "gif" || Extension == "png" || Extension == "bmp"
+                    || Extension == "jpeg" || Extension == "jpg") {
+
+// To Display
+                if (fuData.files && fuData.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#blah').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(fuData.files[0]);
+                }
+
+            } 
+
+
+
+
+
+//The file upload is NOT an image
+else {
+                alert("Photo only allows file types of GIF, PNG, JPG, JPEG and BMP, videos only allows mp4 ");
+
+            }
+        }
+    }
+</SCRIPT>

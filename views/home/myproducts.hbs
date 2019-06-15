@@ -1,0 +1,86 @@
+
+
+
+      <!--Content Area Start-->
+      <div id="content">
+        <!-- slider-hero start here -->
+        <section class="slider-hero-organic inner-banner_info">
+          <div class="container">
+            <h1>ORGANIC PRODUCTS</h1>
+          </div>
+        </section>
+
+        <!-- slider-hero End here -->
+        <!-- breadcrum-sec start here -->
+        <section class="breadcrum-sec">
+          <div class="container">
+            <ol class="breadcrumb">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li class="active">
+                ORGANIC PRODUCTS
+              </li>
+            </ol>
+          </div>
+        </section>
+        <!-- breadcrum-sec end here -->
+{{#if myproducts}}
+         <!-- cool-products start here -->
+				<section class="cool-products">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+						<div class="head-global">
+							<h2 class="h2">Healthy food products</h2>
+						</div>
+						<div class="row">
+							{{#each myproducts}}
+							<div class="col-xs-12 col-sm-3 zoom">
+								<figure>
+									<a href="/products/{{id}}"><img src="/uploads/{{images.[0]}}"  alt="products"/ style="width: 300px;  height: 200px;"></a>
+								</figure>
+								<div class="slider-content product-content">
+									<h3><a href="/products/{{id}}">{{title}}</a></h3>
+  								</div>
+  								<div class="slider-content product-content">
+									<a href="{{link}}" class="plus-more">></a>
+                  {{#if user}}
+									<a href="/products/edit/{{id}}" class="plus-edit"><i class="far fa-edit"></i></a>
+
+									<form action="/products/delete/{{id}}?_method=DELETE" method="post" >   
+                    <button class="btn btn-danger" type="submit"><a class="plus-remove"><i class="fas fa-trash"></i></a></button>
+                   </form>
+                   {{/if}}
+									
+  								</div>
+                                
+							</div>
+							{{/each}}
+						</div>
+					</div>
+				</section>
+		 {{else}}
+
+         <section>
+          <div class="container">
+            <h3 class="text-center" style="padding-top: 30px">No products found</h3>
+          </div>
+        </section>
+        {{/if}}
+				<!-- cool-products end here -->
+			<!-- Pagination -->
+          <ul class="pagination justify-content-center mb-4">
+            {{#paginate current=current pages=pages}}{{/paginate}}
+           </ul>
+          
+        <!-- package_wrap End here -->
+
+
+      </div>
+      <!--Content Area End-->
+
+
+  <script type="text/javascript">
+	document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {  this.parentNode.querySelector('input').focus();});
+  </script>  

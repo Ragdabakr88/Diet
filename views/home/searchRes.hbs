@@ -1,0 +1,70 @@
+
+
+      <!--Content Area Start-->
+      <div id="content">
+        <!-- slider-hero start here -->
+        <section class="slider-hero-resturant inner-banner_info">
+          <div class="container">
+            <h1>SEARCH RESTURANTS</h1>
+          </div>
+        </section>
+
+        <!-- slider-hero End here -->
+
+        <!-- breadcrum-sec start here -->
+        <section class="breadcrum-sec">
+          <div class="container">
+            <ol class="breadcrumb">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li class="active">
+                Search Resturants
+              </li>
+            </ol>
+          </div>
+        </section>
+        <!-- breadcrum-sec end here -->
+
+         <!-- cool-products start here -->
+        <section class="cool-products">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-8">
+
+            <div class="head-global">
+              <h2 class="h2  search-p ">Resturants</h2>
+            </div>
+            <div class="row">
+              {{#if resturants}}
+              {{#each resturants}}
+              <div class="col-xs-12 col-sm-6 zoom">
+                <figure>
+                  <a href="/resturant/{{id}}"><img src="/uploads/{{images.[0]}}"  alt="resturants"/ style="width: 350px;  height: 200px;"></a>
+                </figure>
+                <div class="slider-content product-content">
+                  <h3><a href="/resturant/{{id}}">{{title}}</a></h3>
+                  <span>{{address}}</span>
+                  <span>{{phone}}</span>
+                  
+                  </div>
+                                
+              </div>
+              {{/each}}
+              {{else}}
+              <h2 style="color:black">No Resturants Found</h2>
+              {{/if}}
+            </div>
+          </div>
+        </section>
+        <!-- cool-products end here -->
+      <!-- Pagination -->
+          <ul class="pagination justify-content-center mb-4">
+            {{#paginate current=current pages=pages}}{{/paginate}}
+           </ul>
+          
+        <!-- package_wrap End here -->
+
+      </div>
+      <!--Content Area End-->
+

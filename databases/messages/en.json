@@ -1,0 +1,41 @@
+{
+    "name_required" : "your name is required",
+   
+    "email_required" : "Your email is required",
+    "email_invlid" : " Your email is invalid",
+ 
+    "password_required" : "Your password is required",
+    "password_invlid" : "Your password is invalid",
+
+    "password_not_match" : "Password not match",
+    "email_used_before" : "This email used before",
+    "register_success" : "Register success",
+    "user_not_found" : "User not found",
+
+    "height_required" : "Height required",
+    "height_invlid" : "Height_invlid ,height must be number",
+
+
+    "weight_required" : "Weight required",
+    "weight_invlid" :  "Weight_invlid ,weight must be number",
+
+    "age_required" : "Age required ",
+     "age_invlid" : "Age invlid ,age must be number",
+
+    "gender_required" : "Gender required",
+    "goal_required" : "Goal required",
+    "ex_required" : "Eexcersice required",
+
+    "title_required" : "name required",
+    "company_required" : "company required",
+    "link_required" : "link required",
+    "Discrption_required" : "Discrption required",
+     "Address_required" : "Address required",
+      "Phone_required" : "Phone required",
+      "Phone_invlid" : "Phone invlid"
+
+
+
+
+}
+

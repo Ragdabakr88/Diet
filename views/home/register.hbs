@@ -1,0 +1,72 @@
+{{#if user.isMealplan}}
+
+<div class="container-fluid ">
+</div>
+<div id="content">
+  <!-- slider-hero start here -->
+  <section class="slider-hero-dietplan">
+    <div class="container">
+
+    </div>
+  </section>
+</div>
+<div class="text-center meal-center">
+  <h2><a href="/mealplan">Go to your meal plan</a></h2>
+</div>
+
+</div>
+<!--Content Area End-->
+
+
+
+{{else}}
+
+<div class="container-fluid top-fixed-menu-banner">
+</div>
+<div class="errors">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8  col-md-offset-2">
+        {{#each errors}}
+        <div class="alert alert-danger alert-dismissible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Error</strong> {{this}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="register">
+  <div class="row">
+    <div class="col-md-8  col-md-offset-2 register-warp">
+      <div class="col-md-6 banner-img">
+        <h3 class="text-center hidden-xs register-title"></h3>
+            </div>      
+                <form action="/register" class="col-md-6"  method="post">
+                   <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input class="form-control" id="name" name="name" value="{{name}}" aria-describedby="nameHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{email}}" type="text" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" name="password">
+                  </div>
+                  <div class="form-group">
+                    <label for="passwordConfirm">Confirm Password:</label>
+                    <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm">
+                  </div>
+                  <br>
+                   <button type="submit" class="button-btn">Submit</button>
+                </form>
+         </div>
+     </div>
+</div>  
+
+{{/if}}
+  

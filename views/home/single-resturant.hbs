@@ -1,0 +1,200 @@
+<!--Content Area Start-->
+			<div id="content">
+				<!-- slider-hero start here -->
+				<section class="slider-hero-resturant  inner-banner_info">
+					<div class="container">
+						<h1>Resturant detailes</h1>
+					</div>
+				</section>
+
+				<!-- slider-hero End here -->
+
+
+<!--Content Area Start-->
+			<div id="content">
+				<!-- slider-hero End here -->
+				<!-- breadcrum-sec start here -->
+				<section class="breadcrum-sec">
+					<div class="container">
+						<ol class="breadcrumb">
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li class="active">
+								Resturant details
+							</li>
+						</ol>
+					</div>
+				</section>
+				<!-- breadcrum-sec end here -->
+
+				<!-- 	main-blog-content style start here -->
+				<section class="main-blog-content blog-details">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12">
+								<div class="blog-program">
+									<div class="zoom">
+										<figure class="text-center" >	
+											<img src="/uploads/{{resturant.images.[0]}}" alt="restursnt" style="width:800px; height:350px !important ;" />
+										</figure>
+									</div>
+									<div class="classes-content text-center">
+										<h2><a href="#"> {{resturant.title}} </a></h2>
+										<span>+{{resturant.phone}} <span>{{resturant.address}}</span> </span>
+									</div>
+									<div class="para-info text-center">
+										<p>
+											{{resturant.Discrption}}
+										</p>
+										
+									</div>
+
+
+			                             
+											<div class="search-blog text-center">
+
+												{{#if resturant.video}}
+							                     <video class="video2" controls style="margin-top: -10px">
+													<source src="/uploads/{{resturant.video}}" type="video/mp4">
+												 </video>
+												 {{else}}
+												 <div> </div>
+												 {{/if}}
+
+											</div>
+										
+								       
+
+{{!-- 
+									<div class="comment-blog-details">
+										
+
+										<div class="blog-detail-comment comment-reply">
+											<h2 class="bh2">recent comments</h2>
+
+                                       {{#each resturant.comments}}
+
+											<div class="author-comment reply-author clearfix zoom">
+												<figure>
+													<img src="/images/user.jpg" alt=" author" style="width:40px ; margin-left: 60px;" />
+												</figure>
+												<div class="comment-info">
+													<h3>{{this.user.name}} <span>{{GenerateTime createdAt 'MMMM Do YYYY'}}</span><small>2 hour ago</small></h3>
+													<p> 
+                                                        
+														{{comment}}
+														
+													</p>
+													<ul style="margin: 0,padding:0; list-style-type: none">
+													<li style="display: inline;">
+													  <a href="#" class="button-btn button-small-r reply" id="a">reply</a>
+			                                                         
+			                                          
+													<form action="/comment" method="post" class="formComment">
+
+													<input type="hidden" id="resturantId" value="{{resturant._id}}" name="resturantId">
+
+														<div class="form-group">
+															<label for="msg">Your message</label>
+															<textarea id="msg" rows="1" cols="1" class="text-area" name="comment">message</textarea>
+														</div>
+
+														<button type="submit" class="button-btn submit-btn">
+															Add Comment
+														</button>
+													</form>
+
+												
+
+												    </li>
+
+													<li style="display:inline;">
+														{{#if user}}
+														
+														
+														
+													 <form action="/comment/delete/{{id}}?_method=DELETE" method="post"  class="button-btn-r button-small-r"> 
+
+													  <input type="hidden" id="resturantId" value="{{resturant._id}}"  name="resturantId">	
+
+													  <input type="hidden" id="commentId" value="{{id}}"  name="commentId">	
+
+                                                      <button class=" button-small-r button-btn-r" type="submit">Delete </button>
+
+                                                       
+
+                                                      {{/if}}
+                                                     
+
+                                                    </form>
+
+														
+												
+													 
+
+                                                    </li>
+                                                </ul>
+												</div>
+											</div>
+											{{/each}}
+
+										</div>
+									</div>
+
+					
+
+
+								<div class="comment-wrap-block">
+									<h2 class="bh2">leave a comment</h2>
+									<div class="comment-entry-box">
+
+										<form action="/comment" method="post">
+										<input type="hidden" id="resturantId" value="{{resturant._id}}" name="resturantId">	
+											<div class="form-group">
+												<label for="msg">Your message</label>
+												<textarea id="msg" rows="1" cols="1" class="text-area" name="comment">message</textarea>
+											</div>
+
+											<button type="submit" class="button-btn submit-btn">
+												Add Comment
+											</button>
+										</form>
+
+									</div>
+
+								</div>
+
+							</div> --}}
+
+
+
+	<!-- 	main-blog-content style end here -->
+
+
+
+									<div class="blog-related-post">
+								        <h2><a href="#">Related Resturants</a></h2>
+										
+										<div id="owl-blog-details">
+											{{#each resturants}}
+											<div class="item"><img src="/uploads/{{images}}" alt="blog-detail" style="width:350px; height:250px !important">
+												<div class="slider-content-blog">
+													<a href="/resturant/{{id}}"><h3>{{title}}</h3></a>
+													<span>“Phone: {{phone}}”</span>
+
+												</div>
+
+											</div>
+											{{/each}}
+										</div>  
+
+									</div>
+
+
+
+             
+				</section>
+			
+			               
+			<!--Content Area End-->

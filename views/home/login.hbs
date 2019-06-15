@@ -1,0 +1,47 @@
+
+
+<div class="container-fluid top-fixed-menu-banner">
+</div>
+<div class="errors">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8  col-md-offset-2">
+                  {{#each errors}}
+                        <div class="alert alert-danger alert-dismissible">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          <strong>Error</strong> {{this}}
+                        </div>  
+                  {{/each}}
+            </div>                        
+        </div>
+    </div>
+</div>
+
+<div class="register">
+  <div class="row">
+     <div class="col-md-8  col-md-offset-2 register-warp"> 
+          <div class="col-md-6 banner-img">
+          
+             </div>      
+                <form action="/login" class="col-md-6"  method="post">
+                  <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{email}}" type="text" aria-describedby="emailHelp" placeholder="Enter your email">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter your password">
+                  </div>
+                  <div class="form-group">
+                   <div class="form-check">
+                    <label class="form-check-label">
+                     
+                    </label>
+                   </div>
+                 </div>
+                  <br>
+                   <button type="submit" class="button-btn">Submit</button>
+                </form>
+         </div>
+     </div>
+</div>  

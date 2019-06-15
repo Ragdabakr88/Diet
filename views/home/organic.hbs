@@ -1,0 +1,100 @@
+
+
+      <!--Content Area Start-->
+      <div id="content">
+        <!-- slider-hero start here -->
+        <section class="slider-hero-organic inner-banner_info">
+          <div class="container">
+            <h1>HEALTHY FOOD PRODUCTS</h1>
+          </div>
+        </section>
+
+        <!-- slider-hero End here -->
+        <!-- breadcrum-sec start here -->
+        <section class="breadcrum-sec">
+          <div class="container">
+            <ol class="breadcrumb">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li class="active">
+                ORGANIC PRODUCTS
+              </li>
+            </ol>
+          </div>
+        </section>
+        <!-- breadcrum-sec end here -->
+        <section class="slider">
+          <div class="owl-carousel owl-theme">
+          {{#each products}}
+            <div class="items">
+             <img src="/uploads/{{images.[0]}}"  alt="products"/ style="width: 300px;  height: 200px;">
+            </div>
+            {{/each}}
+             
+         
+          </div>           
+        </section>
+
+         <!-- cool-products start here -->
+				<section class="cool-products">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-md-8">
+						<!--- search -->
+						 <div class="search-container">
+						    <form action="/search" method="POST">
+						      <input type="text" placeholder="Search.." name="searchQuery">
+						      <button type="submit">Submit</button>
+						    </form>
+						  </div>
+                  </div>
+                    <div class="col-xs-12 col-md-4">
+                <!--    {{#if user.isPayment}}
+                    <a href="/payment/pay" class="myButton">Add another product</a>
+                   {{else if user }}
+                   <a href="/payment" class="myButton">Add new product</a>
+                   {{else}}
+                    <a href="/registersponser" class="myButton">Add new product</a>
+                   {{/if}} -->
+                    
+                  </div>
+						</div>
+						<!-- end search -->
+						<div class="head-global">
+							<h2 class="h2">Healthy food products</h2>
+						</div>
+						<div class="row">
+							{{#each products}}
+							<div class="col-xs-12 col-sm-3 zoom">
+								<figure>
+									<a href="/products/{{id}}"><img src="/uploads/{{images.[0]}}"  alt="products"/ style="width: 300px;  height: 200px;"></a>
+								</figure>
+								<div class="slider-content product-content">
+									<h3><a href="/products/{{id}}">{{title}}</a></h3>
+									<span>{{company}}</span>
+									<a href="{{link}}" class="plus-more">+</a>
+  								</div>
+                                
+							</div>
+							{{/each}}
+						</div>
+					</div>
+				</section>
+				<!-- cool-products end here -->
+			<!-- Pagination -->
+          <ul class="pagination justify-content-center mb-4">
+            {{#paginate current=current pages=pages}}{{/paginate}}
+           </ul>
+          
+        <!-- package_wrap End here -->
+
+      </div>
+      <!--Content Area End-->
+
+
+  <script type="text/javascript">
+	document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {  this.parentNode.querySelector('input').focus();});
+  </script>  
+
+  

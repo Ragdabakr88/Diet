@@ -1,0 +1,177 @@
+
+
+
+
+      <!--Content Area Start-->
+      <div id="content">
+        <!-- slider-hero start here -->
+        <section class="slider-hero inner-banner_info">
+          <div class="container">
+            <h1>PACKAGES</h1>
+          </div>
+        </section>
+
+        <!-- slider-hero End here -->
+
+        <!-- breadcrum-sec start here -->
+        <section class="breadcrum-sec">
+          <div class="container">
+            <ol class="breadcrumb">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li class="active">
+                PACKAGES
+              </li>
+            </ol>
+          </div>
+        </section>
+        <!-- breadcrum-sec end here -->
+
+        <!-- package_wrap start here -->
+        <section class="package-wrap">
+          <div class="container">
+
+            <div class="row space_pad">
+              <div class="col-xs-12 col-sm-4 package-list zoom">
+                <figure>
+                  <img src="images/or2.jpeg" alt="packages" />
+                </figure>
+                <div class="package-info">
+                  <div class="head-two">
+                    <h3>basic Package</h3>
+                    <span>Add organic product</span>
+                  </div>
+                  <ul class="list-global pack-list ">
+                    <li>
+                      <i class="fa fa-check-circle"></i>10 product
+                    </li>
+                    <li>
+                      <i class="fa fa-check-circle"></i>$5 for one Monthe 
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="package-price">
+                  <span>$5/M</span>
+                  <a href="contact-us.html" class="button-btn">
+                       <div>
+                            <form action='/payment/pay1' method='POST'>
+                            <script
+                              src='https://checkout.stripe.com/checkout.js' class='stripe-button'
+                              data-key='pk_test_iY8A2porPnfELljsUhTWHnSW'
+                              data-amount='500'
+                              data-name='beck beacker Participation'
+                              data-description='Participation to add product or resturent for 3 monthes'
+                              data-image='https://stripe.com/img/documentation/checkout/marketplace.png'
+                              data-locale='auto'
+                              data-zip-code='true'>
+                            </script>
+                            <input type="hidden" name="chargeAmount" value="500">
+                             <input type="hidden" name="user_id" value="{{user._id}}">
+                            </form>
+                        </div>
+                    </a>
+                </div>
+
+              </div>
+              <div class="col-xs-12 col-sm-4 package-list zoom">
+                <figure>
+                  <img src="images/or2.jpeg" alt="packages" />
+                </figure>
+                <div class="package-info">
+                  <div class="head-two">
+                    <h3>Selver Package</h3>
+                    <span>Add organic product</span>
+                  </div>
+                  <ul class="list-global pack-list ">
+                    <li>
+                      <i class="fa fa-check-circle"></i>10 product
+                    </li>
+                    <li>
+                      <i class="fa fa-check-circle"></i>$10 for 3 Monthes 
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="package-price">
+                  <span>$10/3M</span>
+                  <a href="contact-us.html" class="button-btn">
+                    <div>
+                            <form action='/payment/pay2' method='POST'>
+                            <script
+                              src='https://checkout.stripe.com/checkout.js' class='stripe-button'
+                              data-key='pk_test_iY8A2porPnfELljsUhTWHnSW'
+                              data-amount='1000'
+                              data-name='beck beacker Participation'
+                              data-description='Participation to add product or resturent for 3 monthes'
+                              data-image='https://stripe.com/img/documentation/checkout/marketplace.png'
+                              data-locale='auto'
+                              data-zip-code='true'>
+                            </script>
+                             <input type="hidden" name="user_id" value="{{user._id}}">
+                             <input type="hidden" name="chargeAmount" value="1000">
+                            </form>
+                        </div>
+                  </a>
+                </div>
+
+              </div>
+              
+              <div class="col-xs-12 col-sm-4 package-list zoom">
+                <figure>
+                  <img src="images/or2.jpeg" alt="packages" />
+                </figure>
+                <div class="package-info">
+                  <div class="head-two">
+                    <h3>Extreme Pakage</h3>
+                    <span>Add organic product</span>
+                  </div>
+                  <ul class="list-global pack-list ">
+                    <li>
+                      <i class="fa fa-check-circle"></i>unlimited products
+                    </li>
+                    <li>
+                      <i class="fa fa-check-circle"></i>$15 for 6 Monthes 
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="package-price">
+                  <span>$15/6M</span>
+                  <a href="contact-us.html" class="button-btn">
+                    <div>
+                            <form action='/payment/pay3' method='POST'>
+                            <script
+                              src='https://checkout.stripe.com/checkout.js' class='stripe-button'
+                              data-key='pk_test_iY8A2porPnfELljsUhTWHnSW'
+                              data-amount='1500'
+                              data-name='beck beacker Participation'
+                              data-description='Participation to add product or resturent for 3 monthes'
+                              data-image='https://stripe.com/img/documentation/checkout/marketplace.png'
+                              data-locale='auto'
+                              data-zip-code='true'>
+                            </script>
+                            <input type="hidden" name="chargeAmount" value="1500">
+                            <input type="hidden" name="user_id" value="{{user._id}}">
+                            </form>
+                        </div>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- package_wrap End here -->
+
+      </div>
+      <!--Content Area End-->
+
+
+    </div>
+    

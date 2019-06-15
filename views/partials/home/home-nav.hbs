@@ -1,0 +1,103 @@
+<div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--Page Wrapper Start-->
+        <div id="wrapper" class="homepage-1">
+            <!--Header Section Start-->
+            <header id="header" class="header-one">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-2">
+                            <a href="/" class="logo"> <img src="/images/becklogo1.png" alt="logo" /></a>
+                        </div>
+                        <div class="col-xs-6 col-sm-10 col-md-9 col-lg-8 pull-right mobile-static">
+                            <nav class="navbar">
+
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li class="active">
+                                            <a href="/">Home</a>
+                                        </li>
+
+                                        {{#if user.isMealplan}}
+                                        <li><a href="/register">BeckBecker Diet plans</a></li>
+                                        {{else if user}}
+                                        <li><a href="/dietsteps">BeckBecker Diet plans</a></li>
+                                        {{else}}
+                                        <li><a href="/register">BeckBecker Diet plans</a></li>
+                                        {{/if}}
+
+                                       
+
+                                        <li>
+                                            <a href="/products">Healthy food products</a>
+                                        </li>
+                                   
+                                         {{#if user.isPayment}}
+                                        <li>
+                                            <a href="/my-products">My products</a>
+                                        </li> 
+                                        {{/if}}
+                                        
+                                          {{#if user.isResturant}}
+                                        <li>
+                                            <a href="/my-resturants">My resturants</a>
+                                        </li> 
+                                        {{/if}}
+
+                                            {{#if user.isAdmin}}
+                                        <li>
+                                            <a href="/admin">Admin panel</a>
+                                        </li> 
+                                        {{/if}}
+                                     
+                                    
+                                        <li>
+                                            <a href="/resturant">Resturants</a>
+                                        </li>
+                                        
+                                        {{#if user}}
+                                         
+                                        <li class="active">
+                                            <a href="/logout">Logout</a>
+                                        </li>     
+                                        {{else}}  
+                                        <li class="active">
+                                            <a href="/login">Login</a>
+                                        </li>  
+                                         <li class="active">
+                                            <a href="/register">Register</a>
+                                        </li>  
+                                        {{/if}}                              
+                                    </ul>
+                                </div><!-- /.navbar-collapse -->
+
+                            </nav>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+            <!--Header Section End-->

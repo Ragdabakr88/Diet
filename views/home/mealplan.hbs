@@ -1,0 +1,101 @@
+
+<!--Content Area Start-->
+			<div id="content">
+				<!-- slider-hero start here -->
+				<section class="slider-hero-dietplan ">
+					<div class="container">
+					</div>
+				</section>
+			</div>
+
+
+				<!-- breadcrum-sec start here -->
+				<section class="breadcrum-sec">
+					<div class="container">
+						<ol class="breadcrumb">
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li class="active">
+								MealPlan
+							</li>
+						</ol>
+					</div>
+				</section>
+				<!-- breadcrum-sec end here -->
+
+				<!-- shop-detail start here -->
+				<section class="trainer-detail">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="trainer-pic zoom">
+									<figure>
+										<img src="images/meal1.jpg" alt="">
+									</figure>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="trainer-info">
+										<p class="diets-results">
+									   {{#each diets}}
+											    <ul class='info-ul diets-results'>           	
+													<li class="info isGoal" >{{isGoal}}</li>
+													<li class="info isExercise">{{isExercise}}</li>
+													<li class="info isGender">{{isGender}}</li>
+													<li class="info height">{{height}}</li>
+													<li class="info weight">{{weight}}</li>
+													<li class="info age">{{age}}</li>
+												</ul>
+										{{/each}}
+									</p>
+									<div class="trainer-name">
+										<h2>Share to get your meal plan now!!</h2>
+										 <div class="trainer-contact">
+									        <i class="fa fa-phone phone-btn"></i>
+
+									        <a class="share text-center" href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank"><i class="fa fa-facebook ">Share</i></a>
+                                             <br/>
+                                             <br/>
+									         <span class="button-btn exp-btn share-icon"><a href="https://www.w3schools.com" id="w3s" target="_blank">Your meal plan</a></span>										  						
+									    </div>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</section>
+				<!-- end-mealplan section -->
+
+              <!--cool-products start here -->
+				<section class="cool-products">
+					<div class="container">
+						<div class="head-global">
+							<h6>related product</h6>
+						</div>
+						<div class="row">
+                         {{#each products}}
+							<div class="col-xs-12 col-sm-3 zoom">
+								<figure>
+									<a href="/products"><img src="/uploads/{{images.[0]}}"  alt="products"/ style="width: 300px;  height: 200px;" ></a>
+								</figure>
+								<div class="slider-content product-content">
+									<h3><a href="/products">{{title}}</a></h3>
+									<span>{{company}}</span>
+									<a href="{{link}}" class="plus-more">+</a>
+								</div>
+
+							</div>
+						{{/each}}
+						</div>
+					</div>
+
+				</section>
+				<!-- cool-products end here -->
+			</div>
+			<!--Content Area End-->
+
+					
+
+
+

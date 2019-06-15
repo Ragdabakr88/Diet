@@ -1,0 +1,82 @@
+<section class="content">
+ <div class="errors">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8  col-md-offset-2">
+                  {{#each errors}}
+                        <div class="alert alert-danger alert-dismissible">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                          <strong>Error</strong> {{this}}
+                        </div>  
+                  {{/each}}
+            </div>                        
+        </div>
+    </div>
+ </div>
+
+  <div class="container-fluid">
+            <!-- Basic Validation -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Edit Product</h2>                        
+                        </div>
+                        <div class="body">
+                            <form id="form_validation" method="POST" action="/admin/product/edit/{{product.id}}" enctype="multipart/form-data">
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" name="title" value="{{product.title}}" required>
+                                        <label class="form-label" >Title</label>
+                                    </div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" name="link" required value="{{product.link}}">
+                                        <label class="form-label" >Link</label>
+                                    </div>
+                                </div>
+
+
+                                 <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="file" class="form-control" name="images" required  value="{{product.images}}" multiple>
+                                        <label class="form-label"  style="margin-top: -20px">Images</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="file" class="form-control" name="facts" required value="{{product.facts.[0]}}" multiple>
+                                        <label class="form-label"  style="margin-top: -20px">Facts</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" name="company" required value="{{product.company}}">
+                                        <label class="form-label">Company</label>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <textarea type="text" value="{{product.Discrption}}" name="Discrption" cols="30" rows="5" class="form-control no-resize" required  "></textarea>
+                                        <label class="form-label">Discrption</label>
+                                    </div>
+                                </div>
+                                
+                              
+                                <div class="form-group">
+                                    <input type="checkbox" id="checkbox" name="checkbox">
+                                    <label for="checkbox">I have read and accept the terms</label>
+                                </div>
+                                <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
